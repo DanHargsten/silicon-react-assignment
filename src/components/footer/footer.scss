@@ -1,0 +1,27 @@
+@use '../../styles/abstracts/breakpoints.scss' as b;
+@use '../../styles/abstracts/colors.scss' as c;
+@use '../../styles/abstracts/font-variables.scss' as fv;
+
+
+footer {
+   
+   // Centering content ensuring layout works on different screen sizes
+   .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      // padding-block: 1.75em;
+
+      @include b.breakpoint(768) {
+         flex-direction: row;
+         gap: 0.3rem;
+      }
+   }
+
+   // Footer text-styling
+   p {
+      @include fv.font(14, c.$clr-grey-600);
+      // padding-block: 3.375em;
+   }
+}

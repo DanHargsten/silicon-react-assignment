@@ -1,5 +1,7 @@
-import React from 'react'
+import React from 'react';
+import './footer.scss';
 
+// Adding props to make the component a bit more flexible
 const Footer = ({ year, credit }) => {
   return (
    <footer role="contentinfo">
@@ -8,7 +10,7 @@ const Footer = ({ year, credit }) => {
          <p className="credit">Credit {credit}</p>
       </div>
    </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

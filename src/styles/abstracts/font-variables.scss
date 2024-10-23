@@ -1,0 +1,10 @@
+@use 'colors' as c;
+@use 'functions' as f;
+
+@mixin font($size, $color: null, $weight: 400) {
+   font-size: f.rem($size);
+   @if $color != null {
+      color: $color;
+   }
+   font-weight: $weight;
+}
