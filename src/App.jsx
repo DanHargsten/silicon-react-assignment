@@ -1,5 +1,4 @@
 import './styles/base/index.scss';  // reset and container
-import './App.css';
 import Header from './components/header/Header';
 import Showcase from './components/showcase/Showcase';
 import Logos from './components/logos/Logos';

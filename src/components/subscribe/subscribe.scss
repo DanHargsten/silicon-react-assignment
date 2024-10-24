@@ -1,0 +1,119 @@
+@use '../../styles/abstracts/breakpoints' as b;
+@use '../../styles/abstracts/colors' as c;
+@use '../../styles/abstracts/font-variables' as fv;
+@use '../../styles/abstracts/button-variables' as bv;
+
+
+// Helper class to hide elements visually but keep them accessible to screen readers
+.sr-only {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   padding: 0;
+   margin: -1px;
+   overflow: hidden;
+   clip: rect(0, 0, 0, 0);
+   border: 0;
+}
+
+
+.subscribe {
+
+   .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 1.5em 1em;
+      border-radius: 0.5rem;
+      background-color: c.$clr-grey-100;
+
+      // Ensuring the background padding on extra small screens.
+      @include b.breakpoint(576, max) {
+         width: calc(100% - 2em);
+      }
+
+      // Grid layout for larger screens
+      @include b.breakpoint(768) {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         align-items: center;
+         text-align: left;
+      }
+
+      // Add extra padding for wider screens
+      @include b.breakpoint(1200) {
+         padding-inline: 6.875em;
+      }
+   }
+
+   // Header section: bell icon and title
+   .subscribe__header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+
+      .subscribe__bell-icon {
+         margin-bottom: 1rem; // Adjusting the bell icon to keep background padding even
+      }
+
+      .subscribe__title {
+         max-width: 15ch; // Ensures the title text breaks into two lines on small screens to better emulate the design file
+
+         @include fv.font(22, c.$clr-1, 800);
+         text-align: left;
+
+         // Remove text width limitation and add additional text for larger screens
+         @include b.breakpoint(1200) {
+            max-width: none;
+            @include fv.font(24, c.$clr-grey-900, 800);
+
+            &:after {
+               content: " to stay informed about latest updates";
+            }
+         }
+      }
+   }
+
+   // Form section
+   .subscribe__form {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+
+      .subscribe__input-wrapper {
+         position: relative;
+         display: flex;
+
+         .subscribe__input {
+            flex: 1;
+            padding-left: 1.75rem; // Space for the envelope icon inside the input
+            border: 1px solid c.$clr-grey-400;
+            border-radius: 0.5rem 0 0 0.5rem;
+            @include fv.font(16, c.$clr-grey-900);
+
+            &::placeholder {
+               color: c.$clr-grey-500; // Lighter color for placeholder text
+            }
+         }
+
+         .subscribe__input-icon {
+            position: absolute;
+            top: 50%;
+            left: 0.5rem;
+            transform: translateY(-50%);
+            color: c.$clr-grey-500;
+         }
+
+         .subscribe__button {
+            @include bv.btn-primary();
+            padding: 1rem 1rem;
+            border-radius: 0 0.5rem 0.5rem 0;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+         }
+      }
+   }
+}
