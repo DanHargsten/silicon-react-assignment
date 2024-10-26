@@ -1,0 +1,18 @@
+@use '../../../styles/abstracts/colors.scss' as c;
+@use '../../../styles/abstracts/font-variables.scss' as fv;
+
+// Logo style
+.navbar__logo {
+   display: flex;
+   align-items: center;
+   gap: 0.5rem;
+
+   &-name {
+      @include fv.font(22, c.$clr-1, 800);
+      margin-bottom: 0.1rem;
+   }
+
+   ;
+}
+
+;

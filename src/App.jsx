@@ -1,4 +1,5 @@
 import './styles/base/index.scss';  // reset and container
+import './styles/abstracts/index.scss';
 import Header from './components/header/Header';
 import Showcase from './components/showcase/Showcase';
 import Logos from './components/logos/Logos';
@@ -24,7 +25,7 @@ function App() {
       <Testimonials />
       <Faqs />
       <Subscribe />
-      <Footer year={2024} credit={"MadrasThemes"}/>
+      <Footer year={2024} credit={"MadrasThemes"} />
     </>
   );
 }
