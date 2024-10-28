@@ -18,7 +18,6 @@
 
 
 .subscribe {
-
    .container {
       display: flex;
       flex-direction: column;
@@ -26,7 +25,7 @@
       text-align: center;
       padding: 1.5em 1em;
       border-radius: 0.5rem;
-      background-color: c.$clr-grey-100;
+      background-color: var(--background-secondary);
 
       // Ensuring the background padding on extra small screens.
       @include b.breakpoint(576, max) {
@@ -61,13 +60,13 @@
       .subscribe__title {
          max-width: 15ch; // Ensures the title text breaks into two lines on small screens to better emulate the design file
 
-         @include fv.font(22, c.$clr-1, 800);
+         @include fv.font(22, c.$clr-text-primary, 800);
          text-align: left;
 
          // Remove text width limitation and add additional text for larger screens
          @include b.breakpoint(1200) {
             max-width: none;
-            @include fv.font(24, c.$clr-grey-900, 800);
+            @include fv.font(24, c.$clr-text-primary, 800);
 
             &:after {
                content: " to stay informed about latest updates";
@@ -92,6 +91,10 @@
             border: 1px solid c.$clr-grey-400;
             border-radius: 0.5rem 0 0 0.5rem;
             @include fv.font(16, c.$clr-grey-900);
+
+            body.dark-mode & {
+               background-color: #191d27;
+            }
 
             &::placeholder {
                color: c.$clr-grey-500; // Lighter color for placeholder text

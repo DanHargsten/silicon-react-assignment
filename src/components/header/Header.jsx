@@ -1,3 +1,5 @@
+// Credit: Assistance provided by ChatGPT for code explanations on useEffect functionality
+
 import React, { useEffect, useState } from 'react';
 import './header.scss';
 import NavbarLogo from './Navbar-logo/NavbarLogo';
@@ -7,19 +9,60 @@ import NavbarDarkToggle from './navbar-dark-toggle/NavbarDarkToggle';
 
 
 const Header = () => {
+  // Tracks whether the menu is open or closed
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
+  // Toggle the menu open/close state
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+
+  // Tracks if dark mode is active or not
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  // Toggles the dark mode state when the user clicks the dark mode button
   const toggleDarkMode = () => setIsDarkMode(!isDarkMode);
 
+
+
+  // Checks user's system preference for dark mode on initial page load
+  // useEffect(() => {
+  //   // Checks if the user has dark mode set in system preferences
+  //   const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  //   setIsDarkMode(userPrefersDark);
+
+  //   // Adds or removes 'dark-mode' class on body based on preference
+  //   if (userPrefersDark) {
+  //     document.body.classList.add('dark-mode');
+  //   } else {
+  //     document.body.classList.remove('dark-mode');
+  //   }
+  // }, []);  // Runs only once when the component mounts
+
+
+
+  // // Listens for changes to the user's system preference for dark mode
+  // useEffect(() => {
+  //   // Creates a media query to monitor changes to the system's dark mode setting
+  //   const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+  //   // Updates {isDarkMode} when the system's dark mode preference changes
+  //   const handleChange = (e) => setIsDarkMode(e.matches);
+
+  //   // Adds the event listener for system preference changes
+  //   mediaQuery.addEventListener('change', handleChange);
+  //   // Cleanup: removes the event listener when the component unmounts
+  //   return () => mediaQuery.removeEventListener('change', handleChange);
+  // }, []); // Runs only once when the component mounts, but the listener remains active
+
+
+
+  // Updates the 'dark-mode' class on the body whenever {isDarkMode} changes
   useEffect(() => {
     if (isDarkMode) {
       document.body.classList.add('dark-mode');
     } else {
       document.body.classList.remove('dark-mode');
     }
-  }, [isDarkMode]);
+  }, [isDarkMode]);  // Runs whenever {isDarkMode} changes
+
+
 
   return (
     <nav className="navbar">

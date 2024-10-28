@@ -4,7 +4,8 @@
 
 
 footer {
-   
+   padding-bottom: 3.4rem;
+
    // Centering content ensuring layout works on different screen sizes
    .container {
       display: flex;
@@ -22,6 +23,5 @@ footer {
    // Footer text-styling
    p {
       @include fv.font(14, c.$clr-grey-600);
-      // padding-block: 3.375em;
    }
 }

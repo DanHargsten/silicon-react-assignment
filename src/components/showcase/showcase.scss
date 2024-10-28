@@ -1,0 +1,137 @@
+@use '../../styles/abstracts/breakpoints' as b;
+@use '../../styles/abstracts/colors/' as c;
+@use '../../styles/abstracts/font-variables' as f;
+@use '../../styles/base/typography.scss' as t;
+
+.showcase {
+   padding-top: 2rem;
+   background-image: c.$clr-bg-gradient;
+ 
+   .container {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+         "headline"
+         "content";                 
+     
+      gap: 2rem;
+      justify-items: center;
+      align-items: center;
+ 
+     @include b.breakpoint(768) {
+         grid-template-columns: 1fr 1fr;
+         grid-template-rows: auto auto;
+         grid-template-areas:
+            "headline headline"
+            "content image";
+     }
+     @include b.breakpoint(1400) {
+         grid-template-columns: 1fr 1fr;
+         grid-template-rows: auto auto;
+         grid-template-areas:
+            "headline image"
+            "content image";
+     }
+   }
+
+   .showcase__headline {      
+      grid-area: headline;
+      text-align: center;
+      margin-inline: auto;
+      line-height: 1.2;
+      font-size: 2,125rem;
+      width: 100%;
+      // @include t.font(34, c.$clr-1, 800);
+
+      @include b.breakpoint(768) {
+         // @include t.display-text-style(f.$fs-d5);
+      }
+      @include b.breakpoint(1400) {          
+         text-align: left;
+         padding-top: 4rem;
+         // @include t.display-text-style(f.$fs-d4);
+      }
+   }
+
+    &__content {
+      grid-area: content;
+      text-align: center;
+
+      @include b.breakpoint(768) {
+         text-align: left;
+       }
+
+      @include b.breakpoint(1400) {
+         text-align: left;
+         display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+       }
+
+       &-text {
+         // @include fv.body-text-style(f.$fs-lg);
+         padding-top: 0.5em;
+         width: 90%;
+         margin-inline: auto;
+         text-wrap: pretty;
+
+         @include b.breakpoint(1400) {
+            width: 100%;
+         }
+       }
+    }
+
+   .showcase__buttons {
+      margin-top: 3rem;       
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 1rem;             
+
+      @include b.breakpoint(768) { flex-direction: row; }
+   }
+
+   .showcase__more {
+      padding-block: 2em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.2rem;
+
+      @include b.breakpoint(1400) {
+         padding-top: 13rem;
+         padding-bottom: 4rem;
+      }
+
+      &-text {
+         // @include fv.body-text-style(f.$fs-sm, c.$clr-2);
+      }
+   }
+
+
+   // Phone image
+   &__image {
+      grid-area: image;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      margin-right: 2.1875rem;
+      margin-top: 2rem;
+      display: none;
+   
+      @include b.breakpoint(768) {
+         display: block;         
+      }
+   
+      @include b.breakpoint(1400) {
+         bottom: 6.6rem ;
+         img {
+            width: 100%; 
+            scale: 150%; 
+            height: auto;
+         }
+      }
+   }
+}

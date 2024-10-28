@@ -1,0 +1,67 @@
+@use '../../styles/abstracts/breakpoints.scss' as b;
+@use '../../styles/abstracts/colors.scss' as c;
+
+.logos {
+   display: none;  // Hide in mobile
+
+   @include b.breakpoint(768) { display: block; }  // Show from tablet (768px) and up
+
+
+
+   .container {
+      padding-top: 6em;
+      padding-bottom: 3em;
+      display: grid;
+      gap: 1.5rem;
+      
+      // Set grid columns for different breakpoints
+      grid-template-columns: repeat(4, 1fr);
+
+      @include b.breakpoint(1200) { grid-template-columns: repeat(5, 1fr); }
+
+      @include b.breakpoint(1400) { grid-template-columns: repeat(6, 1fr); }
+   }
+
+
+
+   .logos__cards {
+      width: 169px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid c.$clr-grey-300;
+      border-radius: 0.5rem;
+      margin-inline: auto;
+
+      body.dark-mode & { border: 1px solid rgba(#ffffff, $alpha: 0.15); } // Change color on dark mode
+   }
+
+
+   
+   @include b.breakpoint(768) {
+      // .logos__cards:nth-last-of-type(-n+2) { display: none; }
+      // .logos__cards:nth-child(n+5) { display: none; }
+      .logos__cards:nth-child(n+5) { display: none; }
+   }
+   
+   @include b.breakpoint(1200) {
+      .logos__cards { display: flex; }
+      
+      // .logos__cards:nth-last-of-type(1) { display: none; }
+      // .logos__cards:nth-child(n+6) { display: flex; }
+      .logos__cards:nth-child(n+6) { display: none; }
+   }
+
+   @include b.breakpoint(1400) {
+      .logos__cards { display: flex; }
+      .logos__cards:nth-child(n+6) { display: flex; }
+   }
+
+   
+   img {
+      max-width: 80%;
+      aspect-ratio: 1;
+      object-fit: contain;
+   }
+}

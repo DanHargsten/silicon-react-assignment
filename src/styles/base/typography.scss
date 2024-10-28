@@ -1,0 +1,24 @@
+@use '../abstracts/font-variables.scss' as f;
+
+// Display Headings  
+.fs-d1 { @include f.display-text-style(f.$fs-d1); }
+.fs-d2 { @include f.display-text-style(f.$fs-d2); }
+.fs-d3 { @include f.display-text-style(f.$fs-d3); }
+.fs-d4 { @include f.display-text-style(f.$fs-d4); }
+.fs-d5 { @include f.display-text-style(f.$fs-d5); }
+.fs-d6 { @include f.display-text-style(f.$fs-d6); }
+
+// Headings
+.fs-h1 { @include f.heading-text-style(f.$fs-h1); }
+.fs-h2 { @include f.heading-text-style(f.$fs-h2); }
+.fs-h3 { @include f.heading-text-style(f.$fs-h3); }
+.fs-h4 { @include f.heading-text-style(f.$fs-h4); }
+.fs-h5 { @include f.heading-text-style(f.$fs-h5); }
+.fs-h6 { @include f.heading-text-style(f.$fs-h6); }
+
+// Body text
+.f-xl { @include f.body-text-style(f.$fs-xl) }
+.f-lg { @include f.body-text-style(f.$fs-lg) }
+.f-md { @include f.body-text-style(f.$fs-md) }
+.f-sm { @include f.body-text-style(f.$fs-sm) }
+.f-xs { @include f.body-text-style(f.$fs-xs) }

@@ -1,5 +1,6 @@
-import './styles/base/index.scss';  // reset and container
+import './styles/base/index.scss';
 import './styles/abstracts/index.scss';
+import '../src/App.scss';
 import Header from './components/header/Header';
 import Showcase from './components/showcase/Showcase';
 import Logos from './components/logos/Logos';
@@ -16,16 +17,18 @@ function App() {
 
   return (
     <>
-      <Header />
-      <Showcase />
-      <Logos />
-      <Features />
-      <Slider />
-      <FeaturesExtended />
-      <Testimonials />
-      <Faqs />
-      <Subscribe />
-      <Footer year={2024} credit={"MadrasThemes"} />
+      <div className="wrapper space-y-2">
+        <Header />
+        <Showcase />
+        <Logos />
+        <Features />
+        <Slider />
+        <FeaturesExtended />
+        <Testimonials />
+        <Faqs />
+        <Subscribe />
+        <Footer year={2024} credit={"MadrasThemes"} />
+      </div>
     </>
   );
 }
