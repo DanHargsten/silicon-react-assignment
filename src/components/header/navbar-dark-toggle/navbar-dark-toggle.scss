@@ -1,5 +1,6 @@
 @use '../../../styles/abstracts/breakpoints.scss' as b;
 @use '../../../styles/abstracts/colors.scss' as c;
+@use '../../../styles/abstracts/font-mixins.scss' as fm;
 @use '../../../styles/abstracts/font-variables.scss' as fv;
 
 // Darkmode toggle
@@ -19,7 +20,7 @@
    }
 
    .navbar__darkmode-label {
-      @include fv.font(16, c.$clr-grey-800, 600);
+      @include fm.font(16, c.$clr-grey-800, 600);
       padding-right: 0.5em;
       white-space: nowrap;
 

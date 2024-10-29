@@ -1,6 +1,7 @@
 @use '../../../styles/abstracts/breakpoints.scss' as b;
 @use '../../../styles/abstracts/button-variables.scss' as bv;
 @use '../../../styles/abstracts/colors.scss' as c;
+@use '../../../styles/abstracts/font-mixins.scss' as fm;
 @use '../../../styles/abstracts/font-variables.scss' as fv;
 
 // // Navbar menu
@@ -14,7 +15,7 @@
 
 
    .navbar__link {
-      @include fv.font(16, c.$clr-primary, 600);
+      @include fm.font(16, c.$clr-primary, 600);
 
       &:hover {
          color: darken(c.$clr-primary, 10%);

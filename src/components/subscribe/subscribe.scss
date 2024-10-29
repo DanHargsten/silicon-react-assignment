@@ -1,7 +1,8 @@
 @use '../../styles/abstracts/breakpoints' as b;
-@use '../../styles/abstracts/colors' as c;
-@use '../../styles/abstracts/font-variables' as fv;
 @use '../../styles/abstracts/button-variables' as bv;
+@use '../../styles/abstracts/colors' as c;
+@use '../../styles/abstracts/font-mixins.scss' as fm;
+@use '../../styles/abstracts/font-variables' as fv;
 
 
 // Helper class to hide elements visually but keep them accessible to screen readers
@@ -60,13 +61,13 @@
       .subscribe__title {
          max-width: 15ch; // Ensures the title text breaks into two lines on small screens to better emulate the design file
 
-         @include fv.font(22, c.$clr-text-primary, 800);
+         @include fm.font(22, c.$clr-text-primary, 800);
          text-align: left;
 
          // Remove text width limitation and add additional text for larger screens
          @include b.breakpoint(1200) {
             max-width: none;
-            @include fv.font(24, c.$clr-text-primary, 800);
+            @include fm.font(24, c.$clr-text-primary, 800);
 
             &:after {
                content: " to stay informed about latest updates";
@@ -90,7 +91,7 @@
             padding-left: 1.75rem; // Space for the envelope icon inside the input
             border: 1px solid c.$clr-grey-400;
             border-radius: 0.5rem 0 0 0.5rem;
-            @include fv.font(16, c.$clr-grey-900);
+            @include fm.font(16, c.$clr-grey-900);
 
             body.dark-mode & {
                background-color: #191d27;

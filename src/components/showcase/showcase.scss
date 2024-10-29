@@ -1,7 +1,7 @@
 @use '../../styles/abstracts/breakpoints' as b;
-@use '../../styles/abstracts/colors/' as c;
-@use '../../styles/abstracts/font-variables' as f;
-@use '../../styles/base/typography.scss' as t;
+@use '../../styles/abstracts/colors' as c;
+@use '../../styles/abstracts/font-mixins' as fm;
+@use '../../styles/abstracts/font-variables' as fv;
 
 .showcase {
    padding-top: 2rem;
@@ -42,15 +42,15 @@
       line-height: 1.2;
       font-size: 2,125rem;
       width: 100%;
-      // @include t.font(34, c.$clr-1, 800);
+      @include fm.display-text-style(fv.$d6, c.$clr-text-primary);
 
       @include b.breakpoint(768) {
-         // @include t.display-text-style(f.$fs-d5);
+         @include fm.display-text-style(fv.$d5, c.$clr-text-primary);         
       }
       @include b.breakpoint(1400) {          
          text-align: left;
          padding-top: 4rem;
-         // @include t.display-text-style(f.$fs-d4);
+         @include fm.display-text-style(fv.$d4, c.$clr-text-primary);
       }
    }
 
@@ -70,7 +70,7 @@
        }
 
        &-text {
-         // @include fv.body-text-style(f.$fs-lg);
+         @include fm.body-text-style(fv.$b-lg, c.$clr-text-primary);
          padding-top: 0.5em;
          width: 90%;
          margin-inline: auto;
@@ -106,7 +106,7 @@
       }
 
       &-text {
-         // @include fv.body-text-style(f.$fs-sm, c.$clr-2);
+         @include fm.body-text-style(fv.$b-sm, c.$clr-text-secondary);
       }
    }
 

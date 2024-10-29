@@ -5,7 +5,7 @@ $clr-grey-400: #D4D7E5;
 $clr-grey-500: #B4B7C9;
 $clr-grey-600: #9397AD;
 $clr-grey-700: #565973;
-$clr-grey-800: #33354D;
+$clr-grey-800: #33354D; 
 $clr-grey-900: #0B0F19;
 
 
@@ -33,6 +33,10 @@ $clr-btn-round: #FFFFFF;
 $clr-btn-hover-primary: hsl(from $clr-primary h s calc(l - 5));
 
 
+// Colors for light and dark themes
+$clr-background-primary: var(--background-primary);
+$clr-background-secondary: var(--background-secondary);
+$clr-background-accent: var(--background-accent);
 
-// Text
 $clr-text-primary: var(--text-primary);
+$clr-text-secondary: var(--text-secondary);

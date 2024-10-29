@@ -71,7 +71,6 @@ const Header = () => {
         <NavbarLogo />
         <NavbarMenuToggle isOpen={isMenuOpen} onClick={toggleMenu} />
         {isMenuOpen && <NavbarLinks />}
-        <NavbarLinks />
         <NavbarDarkToggle isDarkMode={isDarkMode} onToggle={toggleDarkMode} />
       </div>
     </nav>

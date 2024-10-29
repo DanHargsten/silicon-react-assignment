@@ -1,6 +1,6 @@
 @use '../../styles/abstracts/breakpoints.scss' as b;
 @use '../../styles/abstracts/colors.scss' as c;
-@use '../../styles/abstracts/font-variables.scss' as fv;
+@use '../../styles/abstracts/font-mixins.scss' as fm;
 
 
 footer {
@@ -12,7 +12,6 @@ footer {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      // padding-block: 1.75em;
 
       @include b.breakpoint(768) {
          flex-direction: row;
@@ -22,6 +21,6 @@ footer {
 
    // Footer text-styling
    p {
-      @include fv.font(14, c.$clr-grey-600);
+      @include fm.font(14, c.$clr-grey-600);
    }
 }

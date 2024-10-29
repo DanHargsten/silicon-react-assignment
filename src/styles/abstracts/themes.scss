@@ -1,9 +1,12 @@
+@use './colors.scss' as c;
+
 :root {
    --background-primary: #ffffff;
    --background-secondary: #f3f6ff;
    --background-accent: #ffffff;
 
    --text-primary: #0B0F19;
+   --text-secondary: #565973;
 }
 
 body.dark-mode {
@@ -12,6 +15,7 @@ body.dark-mode {
    --background-accent: #1e212b;
 
    --text-primary: #ffffff;
+   --text-secondary: #B4B7C9;
 }
 
 

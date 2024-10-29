@@ -1,0 +1,41 @@
+@use 'colors' as c;
+@use 'functions' as f;
+@use 'font-variables' as fv;
+
+// Mixins for typography styles
+@mixin font($size, $color: null, $weight: 400) {
+   font-size: f.rem($size);
+   @if $color != null {
+      color: $color;
+   }
+   font-weight: $weight;
+}
+
+@mixin display-text-style($size, $color: c.$clr-grey-900, $weight: 800) {
+   font-size: $size;
+   color: $color;
+   font-weight: $weight;
+}
+
+@mixin heading-text-style($size, $color: c.$clr-grey-900, $weight: 800) {
+   font-size: $size;
+   font-weight: $weight;
+   color: $color;
+}
+
+@mixin body-text-style($size: fv.$fs-md, $color: c.$clr-grey-700, $weight: 400) {
+   font-size: $size;
+   color: $color;
+   font-weight: $weight;
+}
+
+@mixin nav-text($size: fv.$fs-nav, $color: c.$clr-nav, $weight: 600, $hover-color: c.$clr-primary) {
+   font-size: $size;
+   color: $color;
+   font-weight: $weight;
+
+   &:hover,
+   &:focus-visible {
+      color: $hover-color;
+   }
+}

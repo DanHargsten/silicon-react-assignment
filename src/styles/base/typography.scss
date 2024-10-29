@@ -1,24 +1,31 @@
-@use '../abstracts/font-variables.scss' as f;
+@use '../abstracts/font-mixins' as fm;
+@use '../abstracts/font-variables.scss' as fv;
+
+
+//-------------------------------------
+// Helper classes for font sizes
+//-------------------------------------
 
 // Display Headings  
-.fs-d1 { @include f.display-text-style(f.$fs-d1); }
-.fs-d2 { @include f.display-text-style(f.$fs-d2); }
-.fs-d3 { @include f.display-text-style(f.$fs-d3); }
-.fs-d4 { @include f.display-text-style(f.$fs-d4); }
-.fs-d5 { @include f.display-text-style(f.$fs-d5); }
-.fs-d6 { @include f.display-text-style(f.$fs-d6); }
+.d1 { @include fm.display-text-style(fv.$d1); }
+.d2 { @include fm.display-text-style(fv.$d2); }
+.d3 { @include fm.display-text-style(fv.$d3); }
+.d4 { @include fm.display-text-style(fv.$d4); }
+.d5 { @include fm.display-text-style(fv.$d5); }
+.d6 { @include fm.display-text-style(fv.$d6); }
 
 // Headings
-.fs-h1 { @include f.heading-text-style(f.$fs-h1); }
-.fs-h2 { @include f.heading-text-style(f.$fs-h2); }
-.fs-h3 { @include f.heading-text-style(f.$fs-h3); }
-.fs-h4 { @include f.heading-text-style(f.$fs-h4); }
-.fs-h5 { @include f.heading-text-style(f.$fs-h5); }
-.fs-h6 { @include f.heading-text-style(f.$fs-h6); }
+.h1 { @include fm.heading-text-style(fv.$h1); }
+.h2 { @include fm.heading-text-style(fv.$h2); }
+.h3 { @include fm.heading-text-style(fv.$h3); }
+.h4 { @include fm.heading-text-style(fv.$h4); }
+.h5 { @include fm.heading-text-style(fv.$h5); }
+.h6 { @include fm.heading-text-style(fv.$h6); }
 
 // Body text
-.f-xl { @include f.body-text-style(f.$fs-xl) }
-.f-lg { @include f.body-text-style(f.$fs-lg) }
-.f-md { @include f.body-text-style(f.$fs-md) }
-.f-sm { @include f.body-text-style(f.$fs-sm) }
-.f-xs { @include f.body-text-style(f.$fs-xs) }
+.b-lead { @include fm.body-text-style(fv.$b-lead) }
+.b-xl { @include fm.body-text-style(fv.$b-xl) }
+.b-lg { @include fm.body-text-style(fv.$b-lg) }
+.b-md { @include fm.body-text-style(fv.$b-md) }
+.b-sm { @include fm.body-text-style(fv.$b-sm) }
+.b-xs { @include fm.body-text-style(fv.$b-xs) }
