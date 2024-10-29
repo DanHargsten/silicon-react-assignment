@@ -4,12 +4,12 @@ import './logos.scss';
 const Logos = () => {
   // Array of logo objects with `src` and `alt` properties
   const logos = [
-    { src: '/images/logos/logoipsum-1.svg', alt: "Logo for Ipsum Brand 1" },
-    { src: '/images/logos/logoipsum-2.svg', alt: "Logo for Ipsum Brand 2" },
-    { src: '/images/logos/logoipsum-3.svg', alt: "Logo for Ipsum Brand 3" },
-    { src: '/images/logos/logoipsum-4.svg', alt: "Logo for Ipsum Brand 4" },
-    { src: '/images/logos/logoipsum-5.svg', alt: "Logo for Ipsum Brand 5" },
-    { src: '/images/logos/logoipsum-6.svg', alt: "Logo for Ipsum Brand 6" }
+    { src: '/images/logos/logoipsum-1.svg', alt: "Logo for Ipsum Brand 1." },
+    { src: '/images/logos/logoipsum-2.svg', alt: "Logo for Ipsum Brand 2." },
+    { src: '/images/logos/logoipsum-3.svg', alt: "Logo for Ipsum Brand 3." },
+    { src: '/images/logos/logoipsum-4.svg', alt: "Logo for Ipsum Brand 4." },
+    { src: '/images/logos/logoipsum-5.svg', alt: "Logo for Ipsum Brand 5." },
+    { src: '/images/logos/logoipsum-6.svg', alt: "Logo for Ipsum Brand 6." }
   ];
 
 

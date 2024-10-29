@@ -42,15 +42,15 @@
       line-height: 1.2;
       font-size: 2,125rem;
       width: 100%;
-      @include fm.display-text-style(fv.$d6, c.$clr-text-primary);
+      @include fm.text-style(fv.$d6, c.$clr-text-primary, 800);
 
       @include b.breakpoint(768) {
-         @include fm.display-text-style(fv.$d5, c.$clr-text-primary);         
+         @include fm.text-style(fv.$d5, c.$clr-text-primary, 800);         
       }
       @include b.breakpoint(1400) {          
          text-align: left;
          padding-top: 4rem;
-         @include fm.display-text-style(fv.$d4, c.$clr-text-primary);
+         @include fm.text-style(fv.$d4, c.$clr-text-primary, 800);
       }
    }
 
@@ -70,7 +70,7 @@
        }
 
        &-text {
-         @include fm.body-text-style(fv.$b-lg, c.$clr-text-primary);
+         @include fm.text-style(fv.$b-lg, c.$clr-text-primary);
          padding-top: 0.5em;
          width: 90%;
          margin-inline: auto;
@@ -106,7 +106,7 @@
       }
 
       &-text {
-         @include fm.body-text-style(fv.$b-sm, c.$clr-text-secondary);
+         @include fm.text-style(fv.$b-sm, c.$clr-text-secondary);
       }
    }
 

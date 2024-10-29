@@ -1,5 +1,6 @@
 @use '../../../styles/abstracts/colors.scss' as c;
 @use '../../../styles/abstracts/font-mixins.scss' as fm;
+@use '../../../styles/abstracts/font-variables.scss' as fv;
 
 // Logo style
 .navbar__logo {
@@ -8,11 +9,7 @@
    gap: 0.5rem;
 
    &-name {
-      @include fm.font(22, c.$clr-1, 800);
+      @include fm.text-style(fv.$h4, c.$clr-text-primary, 800);
       margin-bottom: 0.1rem;
-   }
-
-   ;
-}
-
-;
+   };
+};

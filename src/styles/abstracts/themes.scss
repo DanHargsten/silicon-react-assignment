@@ -5,8 +5,10 @@
    --background-secondary: #f3f6ff;
    --background-accent: #ffffff;
 
-   --text-primary: #0B0F19;
-   --text-secondary: #565973;
+   --text-primary: #0B0F19;  // 900
+   --text-secondary: #565973; // 700
+   --text-accent: #9397AD; // 600   
+ 
 }
 
 body.dark-mode {
@@ -16,6 +18,7 @@ body.dark-mode {
 
    --text-primary: #ffffff;
    --text-secondary: #B4B7C9;
+   --text-accent: #9397AD;
 }
 
 

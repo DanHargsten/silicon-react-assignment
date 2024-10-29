@@ -61,13 +61,13 @@
       .subscribe__title {
          max-width: 15ch; // Ensures the title text breaks into two lines on small screens to better emulate the design file
 
-         @include fm.font(22, c.$clr-text-primary, 800);
+         @include fm.text-style(fv.$h5, c.$clr-text-primary, 800);
          text-align: left;
 
          // Remove text width limitation and add additional text for larger screens
          @include b.breakpoint(1200) {
             max-width: none;
-            @include fm.font(24, c.$clr-text-primary, 800);
+            @include fm.text-style(fv.$h4, c.$clr-text-primary, 800);
 
             &:after {
                content: " to stay informed about latest updates";
@@ -99,6 +99,7 @@
 
             &::placeholder {
                color: c.$clr-grey-500; // Lighter color for placeholder text
+               font-style: italic;
             }
          }
 

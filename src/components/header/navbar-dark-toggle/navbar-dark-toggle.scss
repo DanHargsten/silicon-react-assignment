@@ -20,7 +20,7 @@
    }
 
    .navbar__darkmode-label {
-      @include fm.font(16, c.$clr-grey-800, 600);
+      @include fm.text-style(fv.$fs-nav, c.$clr-text-secondary, 600);
       padding-right: 0.5em;
       white-space: nowrap;
 

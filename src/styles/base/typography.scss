@@ -7,25 +7,25 @@
 //-------------------------------------
 
 // Display Headings  
-.d1 { @include fm.display-text-style(fv.$d1); }
-.d2 { @include fm.display-text-style(fv.$d2); }
-.d3 { @include fm.display-text-style(fv.$d3); }
-.d4 { @include fm.display-text-style(fv.$d4); }
-.d5 { @include fm.display-text-style(fv.$d5); }
-.d6 { @include fm.display-text-style(fv.$d6); }
+.d1 { @include fm.text-style(fv.$d1); }
+.d2 { @include fm.text-style(fv.$d2); }
+.d3 { @include fm.text-style(fv.$d3); }
+.d4 { @include fm.text-style(fv.$d4); }
+.d5 { @include fm.text-style(fv.$d5); }
+.d6 { @include fm.text-style(fv.$d6); }
 
 // Headings
-.h1 { @include fm.heading-text-style(fv.$h1); }
-.h2 { @include fm.heading-text-style(fv.$h2); }
-.h3 { @include fm.heading-text-style(fv.$h3); }
-.h4 { @include fm.heading-text-style(fv.$h4); }
-.h5 { @include fm.heading-text-style(fv.$h5); }
-.h6 { @include fm.heading-text-style(fv.$h6); }
+.h1 { @include fm.text-style(fv.$h1); }
+.h2 { @include fm.text-style(fv.$h2); }
+.h3 { @include fm.text-style(fv.$h3); }
+.h4 { @include fm.text-style(fv.$h4); }
+.h5 { @include fm.text-style(fv.$h5); }
+.h6 { @include fm.text-style(fv.$h6); }
 
 // Body text
-.b-lead { @include fm.body-text-style(fv.$b-lead) }
-.b-xl { @include fm.body-text-style(fv.$b-xl) }
-.b-lg { @include fm.body-text-style(fv.$b-lg) }
-.b-md { @include fm.body-text-style(fv.$b-md) }
-.b-sm { @include fm.body-text-style(fv.$b-sm) }
-.b-xs { @include fm.body-text-style(fv.$b-xs) }
+.b-lead { @include fm.text-style(fv.$b-lead) }
+.b-xl { @include fm.text-style(fv.$b-xl) }
+.b-lg { @include fm.text-style(fv.$b-lg) }
+.b-md { @include fm.text-style(fv.$b-md) }
+.b-sm { @include fm.text-style(fv.$b-sm) }
+.b-xs { @include fm.text-style(fv.$b-xs) }

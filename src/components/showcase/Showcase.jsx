@@ -31,7 +31,7 @@ const Showcase = () => {
        </div>
 
        <div className="showcase__image">
-          <img src="/images/illustrations/showcase-phones.svg" alt="Two phones showing off Silicon app features with a graph and cards" />
+          <img src="/images/illustrations/phone-showcase.svg" alt="Two phones showing off Silicon app features with a graph and cards" />
        </div>
 
     </div>
