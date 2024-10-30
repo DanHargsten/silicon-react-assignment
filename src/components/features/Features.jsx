@@ -1,5 +1,7 @@
 import React from 'react';
+import './FeaturesData';
 import './features.scss';
+import { FeaturesData } from './FeaturesData';
 
 const Features = () => {
    return (
@@ -17,75 +19,19 @@ const Features = () => {
 
 
             <div className="features__grid">
-               <div className="feature-item">
-                  <div className="feature-item__img">
-                     <img src="/images/icons/ft-easy-payments.svg" alt="" />
+
+               {FeaturesData.map((feature, index) => (
+                  <div className="feature__item" key={index}>
+                     <div className="feature__item__img">
+                        <img src={feature.icon} alt={`${feature.title} icon.`} />
+                     </div>
+                     <div>
+                        <h3 className="feature-item-heading">{feature.title}</h3>
+                        <p className="feature-item-subtext">{feature.description}</p>
+                     </div>
                   </div>
 
-                  <div>
-                     <h3 className="feature-item-heading">Easy Payments</h3>
-                     <p className="feature-item-subtext">Id mollis consectetur congue egestas egestas suspendisse blandit justo.</p>
-                  </div>
-               </div>
-
-
-               <div className="feature-item">
-                  <div className="feature-item__img">
-                     <img src="/images/icons/ft-data-security.svg" alt="" />
-                  </div>
-
-                  <div>
-                     <h3 className="feature-item-heading">Data Security</h3>
-                     <p className="feature-item-subtext">Augue pulvinar justo, fermentum fames aliquam accumsan vestibulum non.</p>
-                  </div>
-               </div>
-
-
-               <div className="feature-item">
-                  <div className="feature-item__img">
-                     <img src="/images/icons/ft-cost-statistics.svg" alt="" />
-                  </div>
-
-                  <div>
-                     <h3 className="feature-item-heading">Cost Statistics</h3>
-                     <p className="feature-item-subtext">Mattis urna ultricies non amet, purus in auctor non. Odio vulputate ac nibh.</p>
-                  </div>
-               </div>
-
-
-               <div className="feature-item">
-                  <div className="feature-item__img">
-                     <img src="/images/icons/ft-support.svg" alt="" />
-                  </div>
-                  <div>
-                     <h3 className="feature-item-heading">Support 24/7</h3>
-                     <p className="feature-item-subtext">A elementum, imperdiet enim, pretium etiam facilisi in aenean quam mauris.</p>
-                  </div>
-               </div>
-
-
-               <div className="feature-item">
-                  <div className="feature-item__img">
-                     <img src="/images/icons/ft-regular-cashback.svg" alt="" />
-                  </div>
-
-                  <div>
-                     <h3 className="feature-item-heading">Regular Cashback</h3>
-                     <p className="feature-item-subtext">Sit facilisis dolor arcu, fermentum vestibulum arcu elementum imperdiet eleifend.</p>
-                  </div>
-               </div>
-
-
-               <div className="feature-item">
-                  <div className="feature-item__img">
-                     <img src="/images/icons/ft-standards.svg" alt="" />
-                  </div>
-
-                  <div>
-                     <h3 className="feature-item-heading">Top Standards</h3>
-                     <p className="feature-item-subtext">Faucibus cursus maecenas lorem cursus nibh. Sociis sit risus id. Sit facilisis dolor arcu.</p>
-                  </div>
-               </div>
+               ))}
             </div>
          </div>
       </section>
