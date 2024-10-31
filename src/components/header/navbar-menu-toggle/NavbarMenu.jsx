@@ -4,7 +4,7 @@ import './navbar-menu-toggle.scss';
 const NavbarMenuToggle = ({ isOpen, onClick }) => {
   return (
     <button
-      className="navbar__menu-toggle"
+      className={`navbar__menu-toggle ${isOpen ? 'open' : ''}`}
       aria-controls="main-menu"
       aria-expanded={isOpen}
       aria-label="Toggle navigation menu."

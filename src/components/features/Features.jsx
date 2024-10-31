@@ -21,8 +21,8 @@ const Features = () => {
             <div className="features__grid">
 
                {FeaturesData.map((feature, index) => (
-                  <div className="feature__item" key={index}>
-                     <div className="feature__item__img">
+                  <div className="feature-item" key={index}>
+                     <div className="feature-item__img">
                         <img src={feature.icon} alt={`${feature.title} icon.`} />
                      </div>
                      <div>
@@ -30,7 +30,6 @@ const Features = () => {
                         <p className="feature-item-subtext">{feature.description}</p>
                      </div>
                   </div>
-
                ))}
             </div>
          </div>

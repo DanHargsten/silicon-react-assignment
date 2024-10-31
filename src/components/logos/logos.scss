@@ -40,16 +40,11 @@
 
    
    @include b.breakpoint(768) {
-      // .logos__cards:nth-last-of-type(-n+2) { display: none; }
-      // .logos__cards:nth-child(n+5) { display: none; }
       .logos__cards:nth-child(n+5) { display: none; }
    }
    
    @include b.breakpoint(1200) {
       .logos__cards { display: flex; }
-      
-      // .logos__cards:nth-last-of-type(1) { display: none; }
-      // .logos__cards:nth-child(n+6) { display: flex; }
       .logos__cards:nth-child(n+6) { display: none; }
    }
 

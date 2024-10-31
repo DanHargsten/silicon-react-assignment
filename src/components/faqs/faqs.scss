@@ -59,7 +59,7 @@
             padding-block: 1em;
             padding-left: 0.5em;
             text-wrap: pretty;
-            @include tm.text-style(fv.$h6, c.$clr-text-primary, 600);
+            @include fm.text-style(fv.$h6, c.$clr-text-primary, 600);
          }
 
          .btn-circle {
@@ -81,7 +81,7 @@
          padding: 1.5rem;     // Kolla
          display: none;
          overflow: hidden;   
-         @include tm.text-style(tv.$b-sm, c.$clr-text-secondary);
+         @include fm.text-style(fv.$b-sm, c.$clr-text-secondary);
       }
 
       .active .faq__answer {

@@ -21,14 +21,14 @@ const FeaturesExtended = () => {
           </div>
 
           <div className="features-extended__image">
-             <img src="/images/simple-transfer.svg" alt="A line graph showing a fluctuating balance over time." />
+             <img src="/images/illustrations/fe-simple-transfer.svg" alt="A line graph showing a fluctuating balance over time." />
           </div>
        </div>
 
 
        <div className="features-extended__container">
           <div className="features-extended__image">
-             <img src="/images/contacts.svg" alt="Shows a list of contacts with avatars, names and brief messages, and a floating card in front displaying a balance." />
+             <img src="/images/illustrations/fe-contacts.svg" alt="Shows a list of contacts with avatars, names and brief messages, and a floating card in front displaying a balance." />
           </div>
 
           <div className="features-extended__info">
@@ -36,14 +36,14 @@ const FeaturesExtended = () => {
              <div className="features-extended__icons">
                 <div className="icon-block">
                    <div className="icon-block-image">
-                      <img src="/images/icons/easy-payments.svg" alt="" />
+                      <img src="/images/icons/ft-easy-payments.svg" alt="" />
                    </div>
                    <p className="features-extended__description">Manage your payments online. Mollis congue egestas egestas fermentum fames.</p>
                 </div>
 
                 <div className="icon-block">
                    <div className="icon-block-image">
-                      <img src="/images/icons/regular-cashback.svg" alt="" />
+                      <img src="/images/icons/ft-regular-cashback.svg" alt="" />
                    </div>
                    <p className="features-extended__description">A elementur and imperdiet enim, pretium etiam facilisi aenean quam mauris.</p>
                 </div>

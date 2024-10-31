@@ -64,6 +64,30 @@ const Header = () => {
 
 
 
+  useEffect(() => {
+    const mainMenu = document.querySelector('.main-menu');
+
+    if (!mainMenu) return;
+
+    if (isMenuOpen) {
+      mainMenu.classList.remove('hide');
+      mainMenu.style.animation = 'openMenu 300ms forwards';
+    } else {
+      mainMenu.style.animation = 'closeMenu 300ms forwards';
+      // mainMenu.addEventListener('animationend', () => {
+      //   mainMenu.classList.add('hide');        
+      // }, { once: true });
+      //
+      const hideMenu = () => {
+        mainMenu.classList.add('hide');
+        mainMenu.removeEventListener('animationend', hideMenu);
+        setTimeout(hideMenu, 300);
+      }
+      //
+    }
+  }, [isMenuOpen]);
+
+
   return (
     <nav className="navbar">
       <a href="#" className="skip-link">Skip to main content</a>
